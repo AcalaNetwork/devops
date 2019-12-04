@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  node:
+    ports:
+      - "9944:9944"
+      - "9933:9933"
+      - "30333:30333"
+    volumes:
+      - ${WORKING_DIR}/data:/acala/data
+    image: acala/acala-node:latest
+    command:
+      - "acala"
+      - "--base-path=/acala/data"
+      - "--chain=alpha"
+      - "--node-key=${NODE_ID}"
+      - "--port=30333"
+      - "--validator"
+      - "--ws-external"
+      - "--rpc-external"
+      - "--rpc-cors=all"
