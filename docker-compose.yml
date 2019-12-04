@@ -18,5 +18,7 @@ services:
       - "--ws-external"
       - "--rpc-external"
       - "--rpc-cors=all"
+      - "--force-authoring"
+      - "--name=laminar-acala-node"
 volumes:
   node-data:
