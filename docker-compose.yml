@@ -18,5 +18,5 @@ services:
       - "--ws-external"
       - "--rpc-external"
       - "--rpc-cors=all"
-  volumes:
-    node-data:
+volumes:
+  node-data:
