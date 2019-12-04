@@ -6,7 +6,7 @@ services:
       - "9933:9933"
       - "30333:30333"
     volumes:
-      - ${WORKING_DIR}/data:/acala/data
+      - node-data:/acala/data
     image: acala/acala-node:latest
     command:
       - "acala"
@@ -18,3 +18,5 @@ services:
       - "--ws-external"
       - "--rpc-external"
       - "--rpc-cors=all"
+  volumes:
+    node-data:
