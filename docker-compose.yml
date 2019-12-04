@@ -20,5 +20,6 @@ services:
       - "--rpc-cors=all"
       - "--force-authoring"
       - "--name=laminar-acala-node"
+      - "--ws-max-connections=200"
 volumes:
   node-data:
