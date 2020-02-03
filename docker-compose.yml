@@ -11,7 +11,7 @@ services:
     command:
       - "acala"
       - "--base-path=/acala/data"
-      - "--chain=alpha"
+      - "--chain=mandala"
       - "--node-key=${NODE_ID}"
       - "--port=30333"
       - "--validator"
