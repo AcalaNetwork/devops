@@ -9,7 +9,6 @@ services:
       - node-data:/acala/data
     image: acala/acala-node:latest
     command:
-      - "acala"
       - "--base-path=/acala/data"
       - "--chain=mandala"
       - "--node-key=${NODE_ID}"
