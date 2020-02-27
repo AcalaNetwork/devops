@@ -1,5 +1,5 @@
 up:
-	docker-compose up -d
+	docker-compose up -d --remove-orphans
 
 logs:
 	docker-compose logs -f --tail=500
