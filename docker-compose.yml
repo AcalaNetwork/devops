@@ -26,7 +26,8 @@ services:
       - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
-      - "-l afg=trace"
+      - "-l"
+      - "afg=trace"
       - "--execution=wasm"
   validator-1:
     ports:
