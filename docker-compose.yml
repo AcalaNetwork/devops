@@ -7,7 +7,7 @@ services:
       - "30333:30333"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:latest
+    image: acala/acala-node:83c13dc
     restart: always
     command:
       - "--base-path=/acala/data/sentry"
@@ -26,6 +26,7 @@ services:
       - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l afg=trace"
   validator-1:
     ports:
       - "19944:9944"
@@ -33,7 +34,7 @@ services:
       - "30334:30333"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:latest
+    image: acala/acala-node:83c13dc
     restart: always
     command:
       - "--base-path=/acala/data/validator-1"
@@ -54,6 +55,7 @@ services:
       - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l afg=trace"
   validator-2:
     ports:
       - "29944:9944"
@@ -61,7 +63,7 @@ services:
       - "30335:30333"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:latest
+    image: acala/acala-node:83c13dc
     restart: always
     command:
       - "--base-path=/acala/data/validator-2"
@@ -82,6 +84,7 @@ services:
       - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l afg=trace"
   # validator-3:
   #   ports:
   #     - "39944:9944"
