@@ -27,7 +27,7 @@ services:
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
       - "-l afg=trace"
-      - "--execution wasm"
+      - "--execution=wasm"
   validator-1:
     ports:
       - "19944:9944"
@@ -57,7 +57,7 @@ services:
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
       - "-l afg=trace"
-      - "--execution wasm"
+      - "--execution=wasm"
   validator-2:
     ports:
       - "29944:9944"
@@ -87,7 +87,7 @@ services:
       # - "--reserved-nodes"
       # - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
       - "-l afg=trace"
-      - "--execution wasm"
+      - "--execution=wasm"
   # validator-3:
   #   ports:
   #     - "39944:9944"
