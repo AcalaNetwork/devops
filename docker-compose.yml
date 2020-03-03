@@ -7,7 +7,7 @@ services:
       - "30333:30333"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:83c13dc
+    image: acala/acala-node:latest
     restart: always
     command:
       - "--base-path=/acala/data/sentry"
@@ -35,7 +35,7 @@ services:
       - "30334:30334"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:83c13dc
+    image: acala/acala-node:latest
     restart: always
     command:
       - "--base-path=/acala/data/validator-1"
@@ -66,7 +66,7 @@ services:
       - "30335:30335"
     volumes:
       - node-data:/acala/data
-    image: acala/acala-node:83c13dc
+    image: acala/acala-node:latest
     restart: always
     command:
       - "--base-path=/acala/data/validator-2"
