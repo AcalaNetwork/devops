@@ -21,16 +21,18 @@ services:
       - "--ws-max-connections=200"
       - "--in-peers=150"
       - "--reserved-nodes"
-      - "/dns4/validator-1/tcp/30333/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
+      - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
       - "--reserved-nodes"
-      - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
+      - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       - "--reserved-nodes"
-      - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l"
+      - "runtime=debug,afg=trace"
   validator-1:
     ports:
       - "19944:9944"
       - "19933:9933"
-      - "30334:30333"
+      - "30334:30334"
     volumes:
       - node-data:/acala/data
     image: acala/acala-node:83c13dc
@@ -49,16 +51,19 @@ services:
       - "--reserved-nodes"
       - "/dns4/sentry/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
       - "--reserved-nodes"
-      - "/dns4/validator-1/tcp/30333/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
+      - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
       - "--reserved-nodes"
-      - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
+      - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       - "--reserved-nodes"
-      - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l"
+      - "runtime=debug,afg=trace"
+      - "--port=30334"
   validator-2:
     ports:
       - "29944:9944"
       - "29933:9933"
-      - "30335:30333"
+      - "30335:30335"
     volumes:
       - node-data:/acala/data
     image: acala/acala-node:83c13dc
@@ -77,16 +82,19 @@ services:
       - "--reserved-nodes"
       - "/dns4/sentry/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
       - "--reserved-nodes"
-      - "/dns4/validator-1/tcp/30333/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
+      - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
       - "--reserved-nodes"
-      - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
+      - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       - "--reserved-nodes"
-      - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l"
+      - "runtime=debug,afg=trace"
+      - "--port=30335"
   validator-3:
     ports:
       - "39944:9944"
       - "39933:9933"
-      - "30336:30333"
+      - "30336:30336"
     volumes:
       - node-data:/acala/data
     image: acala/acala-node:latest
@@ -105,10 +113,13 @@ services:
       - "--reserved-nodes"
       - "/dns4/sentry/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
       - "--reserved-nodes"
-      - "/dns4/validator-1/tcp/30333/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
+      - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
       - "--reserved-nodes"
-      - "/dns4/validator-2/tcp/30333/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
+      - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       - "--reserved-nodes"
-      - "/dns4/validator-3/tcp/30333/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+      - "-l"
+      - "runtime=debug,afg=trace"
+      - "--port=30336"
 volumes:
   node-data:
