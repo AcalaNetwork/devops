@@ -6,3 +6,9 @@ logs:
 
 pull:
 	docker-compose pull
+
+down:
+	docker-compose down
+
+restart:
+	docker-compose restart
