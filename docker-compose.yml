@@ -112,8 +112,6 @@ services:
       - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
       - "--reserved-nodes"
       - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
-      - "-l"
-      - "runtime=debug,afg=trace"
       - "--port=30336"
 volumes:
   node-data:
