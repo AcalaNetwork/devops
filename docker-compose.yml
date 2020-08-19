@@ -60,35 +60,35 @@ services:
       - "--reserved-nodes"
       - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
       - "--port=30334"
-  validator-2:
-    ports:
-      - "29944:9944"
-      - "29933:9933"
-      - "30335:30335"
-    volumes:
-      - node-data:/acala/data
-    image: acala/acala-node:latest
-    restart: always
-    command:
-      - "--base-path=/acala/data/validator-2"
-      - "--chain=mandala"
-      - "--node-key=${VALIDATOR_2}"
-      - "--validator"
-      - "--unsafe-ws-external"
-      - "--unsafe-rpc-external"
-      - "--rpc-cors=all"
-      - "--name=acala-validator-2"
-      - "--sentry-nodes"
-      - "/dns4/testnet-bootnode-1.acala.laminar.one/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
-      - "--reserved-nodes"
-      - "/dns4/sentry/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
-      - "--reserved-nodes"
-      - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
-      - "--reserved-nodes"
-      - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
-      - "--reserved-nodes"
-      - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
-      - "--port=30335"
+  # validator-2:
+  #   ports:
+  #     - "29944:9944"
+  #     - "29933:9933"
+  #     - "30335:30335"
+  #   volumes:
+  #     - node-data:/acala/data
+  #   image: acala/acala-node:latest
+  #   restart: always
+  #   command:
+  #     - "--base-path=/acala/data/validator-2"
+  #     - "--chain=mandala"
+  #     - "--node-key=${VALIDATOR_2}"
+  #     - "--validator"
+  #     - "--unsafe-ws-external"
+  #     - "--unsafe-rpc-external"
+  #     - "--rpc-cors=all"
+  #     - "--name=acala-validator-2"
+  #     - "--sentry-nodes"
+  #     - "/dns4/testnet-bootnode-1.acala.laminar.one/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
+  #     - "--reserved-nodes"
+  #     - "/dns4/sentry/tcp/30333/p2p/QmYmd7hdwanKpB5jVp6VndHcgjcSYq9izU8ZzccnMWYhoA"
+  #     - "--reserved-nodes"
+  #     - "/dns4/validator-1/tcp/30334/p2p/QmPQv4yTqeEBJXThG128Bd9SKoBAB8oHWY3Udb92p673cT"
+  #     - "--reserved-nodes"
+  #     - "/dns4/validator-2/tcp/30335/p2p/Qmc11Xs1tExESXMG9SaCjUowx2aoigVHxGUQ6bm5yuxjpZ"
+  #     - "--reserved-nodes"
+  #     - "/dns4/validator-3/tcp/30336/p2p/QmaxcLr6sp6JLsPFQPKe1uSvYctfi5ujr4zPbN6dPZAYCW"
+  #     - "--port=30335"
   # validator-3:
   #   ports:
   #     - "39944:9944"
